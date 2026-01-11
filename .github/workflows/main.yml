@@ -14,9 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-
       - name: Pull LabVIEW container image
         run: docker pull nationalinstruments/labview:latest-linux
 
