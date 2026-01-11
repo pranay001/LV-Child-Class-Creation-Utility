@@ -35,4 +35,4 @@ jobs:
           docker run --rm \
             -v "${{ github.workspace }}:/workspace" \
             nationalinstruments/labview:latest-linux \
-            bash -c "cd /workspace/examples/integration-into-cicd && chmod +x runlabview.sh && ./runlabview.sh"
+            bash -c "LabVIEWCLI -OperationName MassCompile -DirectoryToCompile /workspace -LabVIEWPath /usr/local/natinst/LabVIEW-2025-64/labview -Headless"
