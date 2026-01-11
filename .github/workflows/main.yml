@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Pull LabVIEW container image
-        run: docker pull ghcr.io/shivacode-2/labview:2026q1-linux-beta
+        run: docker docker pull nationalinstruments/labview:latest-linux
 
       - name: Run LabVIEWCLI MassCompile on Arrays
         run: |
