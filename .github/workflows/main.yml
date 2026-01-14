@@ -17,12 +17,6 @@ jobs:
       - name: Pull LabVIEW container image
         run: docker pull nationalinstruments/labview:latest-linux
 
-      - name: Run LabVIEWCLI MassCompile on Arrays
-        run: |
-          docker run --rm \
-            nationalinstruments/labview:latest-linux \
-            bash -c "LabVIEWCLI -OperationName MassCompile -DirectoryToCompile /usr/local/natinst/LabVIEW-2025-64/examples/Arrays -LabVIEWPath /usr/local/natinst/LabVIEW-2025-64/labview -Headless"
-
       - name: Run CI integration script in container
         run: |
           docker run --rm \
